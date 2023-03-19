@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    /> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  </head>
+  <body>
+    <nav>
+      <h1 class="mainTitle">library</h1>
+    </nav>
+    <main>
+      <div class="controls">
+        <h4>Recently added</h4>
+        <button id="addBook" onclick="ModalOpen()">Add Books</button>
+      </div>
+      <div class="books">
+        <div class="book">
+          <div class="MainInfo">
+            <h2 class="Title">The Monk who Sold his ferrari</h2>
+            <h3 class="author">By Robin Sharma</h3>
+          </div>
+          <div class="SecondaryInfo">
+            <p class="pages">250 pages</p>
+            <p class="status">
+             <p class="CurrentStatus"> Not Yet Started </p>
+              <button class="update">
+                <div class="tooltip material-symbols-outlined">build
+                  <span class="tooltiptext">update</span>
+                </div>
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="mymodal" class="modal">
+      <button id="closebuttons" onclick="ModalClose()">
+        <span class="material-symbols-outlined"> close </span>
+      </button>
+      <h4>Book Details</h4>
+      <form id="AddBookForm">
+        <div class="formsections">
+          <label for="Book">Name of Book</label>
+          <input type="text" name="Book" id="bookTitle" />
+        </div>
+        <div>
+          <label for="author">Author </label>
+          <br />
+          <input type="text" name="author" id="author" />
+        </div>
+        <div>
+          <label for="pages">Pages</label>
+          <br />
+          <input type="number" name="pages" id="Totalpages" />
+        </div>
+        <div>
+          <label for="Book">Status</label>
+          <select name="books" id="books-status">
+            <option value="Reading">Reading</option>
+            <option value="Finished Reading">Finished Reading</option>
+            <option value="Not Yet Started">Not Yet Started</option>
+          </select>
+        </div>
+        <button type = "submit" id="submitbook" onclick="ModalClose()">Add Book</button>
+        <button id="Delete" type="submit">
+          <span class="material-symbols-outlined"> delete </span>
+        </button>
+      </form>
+    </div>
+      <div class="libraryBooks"></div>
+    <script src="main.js"></script>
+  </body>
+</html>

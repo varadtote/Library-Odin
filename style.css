@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%); */
+}
+
+nav {
+    /* height: 10vh; */
+    /* background-color: blue; */
+    background-color: rgb(4, 9, 24);
+}
+
+main {
+    height: 90vh;
+
+    background-color: rgb(4, 6, 45);
+}
+
+.mainTitle {
+    font-family: 'Lobster', sans-serif;
+    padding: 10px;
+    font-size: 50px;
+    color: rgb(3, 230, 3);
+    margin-left: 25px;
+}
+
+.controls {
+    padding: 25px;
+}
+
+.controls h4 {
+    color: #fff;
+}
+
+.books {
+    margin: 25px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 10px;
+
+}
+
+#addBook {
+    padding: 8px;
+    background-color: #fff;
+    border: 0.1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(242, 223, 242) !important;
+    padding: 10px;
+
+    border-radius: 10px;
+}
+
+.Title {
+    border-bottom: 1px solid gray;
+}
+
+.author {
+    margin-top: 5px;
+}
+
+.SecondaryInfo {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid gray;
+    padding-top: 1px;
+}
+
+.CurrentStatus {
+    border-left: 1px solid gray;
+    padding-left: 15px;
+}
+
+.update {
+    background-color: rgb(242, 223, 242);
+    cursor: pointer;
+    border: none;
+    vertical-align: middle;
+}
+
+.modal {
+    height: 350px;
+    width: 250px;
+    background-color: rgb(255, 255, 255) !important;
+    padding: 25px;
+    border: 1px solid black;
+    border-radius: 10px;
+    /* z-index: 1; */
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 25%;
+}
+
+.formsections {
+    display: flex;
+    flex-direction: column;
+}
+
+.radioButtons {
+    display: flex;
+    /* flex-direction: row; */
+}
+
+#submitbook {
+    cursor: pointer;
+}
+
+#closebuttons {
+    float: right;
+    margin-top: -10px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#Delete {
+    float: right;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+#submitbook {
+    padding: 10px;
+    width: 100px;
+    border-radius: 5px;
+    margin-top: 15px;
+    background-color: #fff;
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.libraryBooks {
+    height: 250px;
+    width: 250px;
+    background-color: gray;
+    color: white;
+    font-size: 25px;
+}
+
+.myBook {
+    color: green;
+    font-size: 15px;
+}
